@@ -6,6 +6,7 @@ body {
   background-color: #ffe9ef;
   font-family: 'Raleway', sans-serif;
   margin: 0;
+  font-weight: 300;
 }
 
 a {
@@ -17,6 +18,36 @@ ul {
   list-style: none;
 }
 
+h3 {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-left: -6rem;
+}
+
+.title-right {
+  justify-content: flex-end;
+  margin-right: -6rem;
+}
+
+.line {
+  height: 1px;
+  width: 5rem;
+  background-color: #090b08;
+  margin-right: 1rem;
+}
+
+.line-right {
+  order: 2;
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
 .btn {
   display: inline-block;
   border: 1px solid #090b08;
@@ -24,6 +55,7 @@ ul {
   color: #090b08;
   padding: 0.4rem 1.2rem;
   transition: all 0.5s ease-in;
+  cursor: pointer;
 }
 
 .btn.btn-transparent {
@@ -32,31 +64,39 @@ ul {
 
 .btn.btn-hover:hover {
   transform: translateY(-5px);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 10px 7px -9px rgba(0, 0, 0, 0.9);
+}
+
+.btn.btn-submit {
+  background-color: #f5d9d6;
+  padding: 10px 30px;
+}
+
+.btn.btn-submit:hover {
+  background-color: #090b08;
+  color: #fff;
 }
 
 header {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 10rem;
   padding: 1rem 2rem;
-  z-index: 10;
+  z-index: 1;
 }
 
 header::before {
   content: '';
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  height: 6.5rem;
+  height: 70%;
   width: 100%;
   background-color: #ffe9ef;
   z-index: -1;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -76,6 +116,10 @@ header::before {
   padding: 0 10px;
 }
 
+.menu__item a:hover {
+  border-bottom: 1px solid #090b08;
+}
+
 .hero {
   display: flex;
   justify-content: center;
@@ -91,7 +135,11 @@ header::before {
 }
 
 .feature {
-  padding: 2rem 4rem;
+  padding: 5rem 14rem;
+}
+
+.feature-item {
+  margin-top: 3rem;
 }
 
 .feature .product {
@@ -99,7 +147,8 @@ header::before {
 }
 
 .feature .product-info {
-  flex-basis: 50%;
+  flex: 1;
+  order: 1;
   padding-top: 5rem;
 }
 
@@ -108,7 +157,9 @@ header::before {
 }
 
 .feature .product-img {
-  flex-basis: 50%;
+  flex: 1 0 12rem;
+  order: 2;
+  margin-top: -4rem;
 }
 
 .feature .product-img img {
@@ -136,7 +187,7 @@ header::before {
   top: 0;
   left: 0;
   transform: translate(8px, 8px);
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   transition: all 0.5s ease-in;
 }
 
@@ -155,4 +206,109 @@ header::before {
 
 .feature-item__content .box3 {
   flex: 2 0 100%;
+}
+
+.skincare {
+  background-color: #f5d9d6;
+}
+
+.skincare-content {
+  display: flex;
+}
+
+.skincare-content__info {
+  flex: 1 0 40%;
+  margin-right: 1rem;
+  font-weight: 300;
+}
+
+.skincare-content__video {
+  position: relative;
+  flex: 2 0 55%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  height: 0;
+}
+
+.skincare-content__video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.contact {
+  padding: 2rem 4rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-mail {
+  flex: 1 0 50%;
+  padding: 0 1rem;
+}
+
+.contact-mail form {
+  display: flex;
+}
+
+.contact-mail form input[type="email"] {
+  flex: 1 0 80%;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.contact-mail form button {
+  flex: 1 0 20%;
+  border-left: 0;
+}
+
+.contact-action {
+  flex: 1 0 50%;
+  padding: 0 1rem;
+}
+
+.contact-action .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-action .wrapper .contact__phone {
+  margin-right: 20px;
+}
+
+.contact-action .wrapper .social {
+  flex: 1 0 100%;
+  display: flex;
+  padding: 0;
+}
+
+.contact-action .wrapper .social li {
+  margin-right: 2rem;
+}
+
+.contact-action .wrapper .social li i {
+  font-size: 1.5rem;
+}
+
+.contact .copyright {
+  flex: 1 0 100%;
+  position: relative;
+  padding: 1rem 0;
+  font-size: .8rem;
+}
+
+.contact .copyright::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #dadada;
+}
+
+@media (min-width: 992px) {
+  .skincare-content__video {
+    padding-bottom: 33.25%;
+  }
 }

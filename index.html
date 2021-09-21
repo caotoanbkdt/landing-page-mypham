@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9201f9c9cf.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -34,10 +35,13 @@
 
   <!-- Feature -->
   <div class="feature">
-    <h3>NEW FRIEND!</h1>
+    <div class="title">
+      <span class="line"></span>
+      <h2>NEW FRIEND!</h1>
+    </div>
     <div class="product">
       <div class="product-info">
-        <h3>PIXEL FACIAL CREAM</h3>
+        <h2>PIXEL FACIAL CREAM</h2>
         <p>A lightweight formula that packs a punch with avocado protein extract to strengthen skin's own moisture barrier, sealing
         in hydration to protect, nourish and soften skin.</p>
         <a href="#" class="btn btn-tranparent btn-hover">Details</a>
@@ -48,24 +52,77 @@
     </div>
 
     <div class="feature-item">
-      <h3>Collections</h3>
+      <div class="title title-right">
+        <span class="line line-right"></span>
+        <h3>Collections</h3>
+      </div>
       <div class="feature-item__content">
         <a href="" class="box box1">
-            <h6>Moisturizers</h6>
+            <h3>Moisturizers</h3>
           <div class="box-overlay"></div>
         </a>
         
         <a href="" class="box box2">
-            <h6>Eye & lip care</h6>
+            <h3>Eye & lip care</h3>
           <div class="box-overlay"></div>
         </a>
         
         <a href="" class="box box3">
-            <h6>Cleansers & tones</h6>
+            <h3>Cleansers & tones</h3>
             <div class="box-overlay"></div>
           </div>
         </a>
       </div>    
     </div>
+
+    <!-- skincare section -->
+    <div class="feature skincare">
+      <div class="title title-left">
+        <div class="line line-left"></div>
+        <h3>PIXEL SKINCARE</h3>
+      </div>
+      <div class="skincare-content">
+        <div class="skincare-content__info">
+          <p>Since 2016, Pixel Skin Care has been at the forefront of the move towards organic and natural skincare.</p>
+          <p>Specialising in emerging niche natural skin care brands, Pixel Skin Care is a safe zone for you and your skin where we
+          have taken special care to hand pick and offer you some of the purest and safest brands from global organic specialists.</p>
+          <p>From cutting edge science to luxurious natural indulgence, we have selected the best products and treatments for healing
+          and improving your well-being.</p>
+        </div>
+
+        <div class="skincare-content__video">
+          <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/j4hvdSCV7xc" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact section -->
+    <div class="contact">
+      <div class="contact-mail">
+        <h4>ADD MORE BEAUTY TO YOUR EMAIL</h4>
+        <form class="contact-form" action="#">
+          <input type="email" name="email" placeholder="Your email">
+          <button type="submit" class="btn btn-submit">OK</button>
+        </form>
+      </div>
+
+      <div class="contact-action">
+        <h4>STAY IN TOUCH WITH PIXEL</h4>
+        <div class="wrapper">
+          <a href="#" class="contact__phone"><i class="fas fa-phone"></i> 070-XXX-XXX</a>
+          <a href="#" class="contact__email"><i class="fas fa-envelope"></i> Send an email</a>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; Theme, Logo, Product Design by Ann</p>
+      </div>
+    </div>
+
 </body>
 </html>
