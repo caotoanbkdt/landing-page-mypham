@@ -66,6 +66,18 @@ h3 {
   background-color: transparent;
 }
 
+.toggle-menu {
+  display: none;
+  border:none;
+  border-bottom: 1px solid transparent;
+  padding: 0;
+  transition: none;
+}
+
+.toggle-menu:hover {
+  border-bottom: 1px solid $text-color;
+}
+
 .btn.btn-hover:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 7px -9px rgba(0,0,0,0.9);
@@ -80,6 +92,50 @@ h3 {
     color: #fff;
   }
 }
+
+ .social {
+        display: flex;
+
+        li {
+          margin-right: 2rem;
+
+          i {
+            font-size: 1.5rem;
+          }
+        }
+
+        &-mobile {
+          justify-content: center;
+          margin-top: 6rem;
+        }
+      }
+
+// menu
+.show-on-mobile {
+  display: none;
+}
+
+.menu-mobile {
+  position: fixed;
+  top: 7rem;
+  width: 100%;
+  background-color: $second-color;
+  height: 100vh;
+  z-index: 1;
+  padding: 3rem;
+  display: none;
+
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+
+    .menu__item {
+      margin: 1rem auto;
+    }
+  }
+}
+
+// header
 
 header {
   position: fixed;
@@ -115,7 +171,7 @@ header::before {
 .menu {
 
   &-list {
-    display: flex;
+    display: none;
   }
 
   &__item {
@@ -287,20 +343,6 @@ header::before {
 
       .contact__phone {
         margin-right: 20px;
-      }
-     
-      .social {
-        flex: 1 0 100%;
-        display: flex;
-        padding: 0;
-
-        li {
-          margin-right: 2rem;
-
-          i {
-            font-size: 1.5rem;
-          }
-        }
       }
     }
   }
