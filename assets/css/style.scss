@@ -23,7 +23,6 @@ ul {
 }
 
 h3 {
-  font-size: 0.8rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -215,6 +214,7 @@ header::before {
       padding-top: 5rem;
 
       p {
+        text-align: center;
         margin: 2rem 0;
       }
     }
@@ -323,6 +323,7 @@ header::before {
       input[type="email"] {
         flex: 1 0 80%;
         padding: 10px;
+        border: 1px solid $text-color;
         background-color: transparent;
       }
 
@@ -341,8 +342,17 @@ header::before {
       display: flex;
       flex-wrap: wrap;
 
+      .contact-footer {
+        flex: 1 0 48%;
+      }
+
       .contact__phone {
         margin-right: 20px;
+      }
+
+      .social {
+        flex: 1 0 100%;
+        padding: 0;
       }
     }
   }

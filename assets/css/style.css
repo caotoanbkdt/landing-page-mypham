@@ -19,7 +19,6 @@ ul {
 }
 
 h3 {
-  font-size: 0.8rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -206,6 +205,7 @@ header::before {
 }
 
 .feature .product-info p {
+  text-align: center;
   margin: 2rem 0;
 }
 
@@ -309,6 +309,7 @@ header::before {
 .contact-mail form input[type="email"] {
   flex: 1 0 80%;
   padding: 10px;
+  border: 1px solid #090b08;
   background-color: transparent;
 }
 
@@ -327,8 +328,17 @@ header::before {
   flex-wrap: wrap;
 }
 
+.contact-action .wrapper .contact-footer {
+  flex: 1 0 48%;
+}
+
 .contact-action .wrapper .contact__phone {
   margin-right: 20px;
+}
+
+.contact-action .wrapper .social {
+  flex: 1 0 100%;
+  padding: 0;
 }
 
 .contact .copyright {
@@ -353,6 +363,113 @@ header::before {
   .toggle-menu {
     display: block;
   }
+  .title {
+    margin-left: 0;
+  }
+  .title .line {
+    width: 3rem;
+  }
+  .title-right {
+    margin-right: 0;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  .hero img {
+    width: 10rem;
+  }
+  .feature {
+    padding: 5rem 2rem;
+  }
+  .feature-item {
+    margin-top: 3rem;
+  }
+  .feature .product {
+    flex-direction: column;
+  }
+  .feature .product-info {
+    order: 2;
+    text-align: center;
+    padding-top: 3rem;
+  }
+  .feature .product-info p {
+    margin: 1rem 0;
+  }
+  .feature .product-img {
+    order: 1;
+  }
+  .feature .product-img img {
+    width: 100%;
+  }
+  .skincare-content {
+    flex-direction: column;
+  }
+  .skincare-content__info {
+    flex: 1;
+    margin-right: 1rem;
+  }
+  .skincare-content__video {
+    flex: 1;
+    margin-top: 4rem;
+  }
+  .contact {
+    padding: 2rem 2rem 0;
+  }
+  .contact-mail {
+    flex: 1 0 100%;
+    padding: 0 1rem;
+  }
+  .contact-action {
+    margin-top: 1rem;
+  }
+  .contact-action .wrapper .contact-footer {
+    margin: 0;
+    padding: 1rem;
+    flex: 1 0 50%;
+    border: 1px solid #090b08;
+    text-align: center;
+  }
+  .contact-action .wrapper .contact-email {
+    border-left: 0;
+  }
+  .contact-action .wrapper .social {
+    flex: 1 0 100%;
+    justify-content: center;
+    margin: 2rem auto;
+  }
+  .contact .copyright {
+    padding: 0;
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .feature {
+    padding: 5em 2rem;
+  }
+  .feature .product-info p {
+    text-align: justify;
+  }
+  .title {
+    margin-left: 0;
+  }
+  .title .line {
+    width: 3rem;
+  }
+  .title-right {
+    margin-right: 0;
+  }
+  .skincare-content {
+    flex-direction: column;
+  }
+  .skincare-content__info {
+    flex: 1;
+    margin-right: 1rem;
+  }
+  .skincare-content__video {
+    flex: 1;
+    margin-top: 4rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -362,13 +479,17 @@ header::before {
   .show-on-mobile {
     display: none;
   }
+  .skincare-content__video {
+    padding-bottom: 56.25%;
+  }
 }
 
-@media (min-width: 992px) {
-  .show-on-mobile {
-    display: none;
+@media (min-width: 1024px) {
+  .skincare-content__info {
+    padding-right: 3rem;
   }
   .skincare-content__video {
     padding-bottom: 33.25%;
+    align-self: center;
   }
 }
